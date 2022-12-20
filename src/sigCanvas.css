@@ -1,0 +1,12 @@
+.signatureCanvas {
+  border: 1px solid black;
+  width: 100%;
+  min-height: 500px;
+}
+
+.popup-content {
+  background-color : white;
+}
+.popup-overlay {
+  background-color : grey!important;
+}
