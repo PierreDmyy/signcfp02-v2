@@ -127,6 +127,7 @@ Button {
 .font-text {
 	font-family: 'Calibri'; 
 	font-size : 25px;
+	color : 'black'!important;
 }
 
 .a {

@@ -50,20 +50,20 @@ function App() {
       <div id="my-node" class="signature-card">
         <div class="legal-clause">
           <div className="font-text">
-          Conformément au règlement européen 2016/679 du parlement européen et du conseil du 27 avril 2016, relatif à la protection des
-          personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation des données, le CFP02 dispose de moyens informatiques
-          destinés à répondre à ses obligations réglementaires et juridiques en tant qu’organisme de formation. Les données personnelles collectées et enregistrées
-          sont réservées à l’usage exclusif du CFP02 et ne sont communiquées à aucun tiers.<br></br><br></br>
-          Je soussigné(e), <input type="text" id="name" name="name" required size="30"></input>&nbsp;
-          déclare  avoir  pris connaissance des modalités de collecte et de traitement de mes données personnelles.<br></br><br></br>
-          J’autorise le CFP02 à les exploiter pour répondre à ses obligations réglementaires et juridiques en tant qu’organisme de formation dans les conditions
-          citées ci-dessus.  <br></br> <br></br></div>
+            Conformément au règlement européen 2016/679 du parlement européen et du conseil du 27 avril 2016, relatif à la protection des
+            personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation des données, le CFP02 dispose de moyens informatiques
+            destinés à répondre à ses obligations réglementaires et juridiques en tant qu’organisme de formation. Les données personnelles collectées et enregistrées
+            sont réservées à l’usage exclusif du CFP02 et ne sont communiquées à aucun tiers.<br></br><br></br>
+            Je soussigné(e), <input type="text" id="name" name="name" required size="30"></input>&nbsp;
+            déclare  avoir  pris connaissance des modalités de collecte et de traitement de mes données personnelles.<br></br><br></br>
+            J’autorise le CFP02 à les exploiter pour répondre à ses obligations réglementaires et juridiques en tant qu’organisme de formation dans les conditions
+            citées ci-dessus.  <br></br> <br></br></div>
           <Row>
             <Col>
               <span className='doneas'>Fait à LAON, le  <input type="date" id="date" name="date" required size="10"></input>&nbsp; <br></br>
                 {imageURL ? (
                   <>
-                    <p> <br /> Signé électroniquement : <br /> { 'CFP02-' + imageURL.substring(47, 70)}</p>
+                    <p> <br /><div className="font-text"> Signé électroniquement : <br /> {'CFP02-' + imageURL.substring(47, 70)} </div></p>
 
                   </>
                 ) : null}
@@ -71,11 +71,12 @@ function App() {
             </Col>
             <Col>
             </Col>
-            <Col> Signature, précédée de la mention « Lu et approuvé.
+            <Col>          <div className="font-text">
+              Signature, précédée de la mention « Lu et approuvé.</div>
               <input type="text" id="approuved" name="approuved" required size="30"></input>&nbsp;
               {imageURL ? (
                 <>
-                <br /> <br />
+                  <br /> <br />
                   <img src={imageURL} alt="my signature" style={{ display: "block", margin: "0 auto", width: "150px" }}
 
                   />
@@ -100,7 +101,7 @@ function App() {
         </div>
       </div>
       <Button id="valid" className="btn_valid" variant="success" onClick={dlpng}>Valider</Button>
-      <div style={{display : 'none'}}  id="result"></div>
+      <div style={{ display: 'none' }} id="result"></div>
       <div id="download"></div>
     </div>
   );
