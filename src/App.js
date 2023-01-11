@@ -60,7 +60,7 @@ function App() {
             citées ci-dessus.  <br></br> <br></br></div>
           <Row>
             <Col>
-              <span className='doneas'>Fait à LAON, le  <input type="date" id="date" name="date" required size="10"></input>&nbsp; <br></br>
+              <span className='doneas font-text'>Fait à LAON, le  <input type="date" id="date" name="date" required size="10"></input>&nbsp; <br></br>
                 {imageURL ? (
                   <>
                     <p> <br /><div className="font-text"> Signé électroniquement : <br /> {'CFP02-' + imageURL.substring(47, 70)} </div></p>
