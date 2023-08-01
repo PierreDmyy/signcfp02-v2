@@ -1,5 +1,8 @@
 import React, { useState, useRef } from "react";
-import Popup from "reactjs-popup";
+import Popup from "reactjs-popup";  
+import { BiSolidCheckCircle, BiPen } from "react-icons/bi";
+
+
 import './App.css';
 import SignaturePad from "react-signature-canvas";
 import Row from 'react-bootstrap/Row';
@@ -64,7 +67,6 @@ function App() {
                 {imageURL ? (
                   <>
                     <p> <br /><div className="font-text"> Signé électroniquement : <br /> {'CFP02-' + imageURL.substring(47, 70)} </div></p>
-
                   </>
                 ) : null}
               </span> <br></br>
@@ -84,7 +86,7 @@ function App() {
               ) : <> <br></br>
                 <Popup
                   modal
-                  trigger={<Button>SIGNER</Button>}
+                  trigger={<Button style={{marginTop : '15px'}}>SIGNER <BiPen /></Button>}
                   closeOnDocumentClick={false} >
                   {close => (
                     <>
@@ -100,7 +102,7 @@ function App() {
           </Row>
         </div>
       </div>
-      <Button id="valid" className="btn_valid" variant="success" onClick={dlpng}>Valider</Button>
+      <Button id="valid" className="btn_valid" variant="success" onClick={dlpng}>Valider <BiSolidCheckCircle /></Button>
       <div style={{ display: 'none' }} id="result"></div>
       <div id="download"></div>
     </div>
