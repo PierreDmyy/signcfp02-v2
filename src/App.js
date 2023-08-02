@@ -95,7 +95,7 @@ function App() {
                         save();
                         dlpng();
                       }}>ENREGISTER</Button>
-                      <Button style={{marginRight: '35px'}} variant="danger" onClick={clear}>EFFACER</Button>
+                      <Button style={{marginRight: '10px'}} variant="danger" onClick={clear}>EFFACER</Button>
                       <Button variant="secondary" onClick={close}>FERMER</Button>
                     </>
                   )}
