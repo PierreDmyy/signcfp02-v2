@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import Popup from "reactjs-popup";
-import { BiSolidCheckCircle, BiPen } from "react-icons/bi";
+import { BiPen } from "react-icons/bi";
 
 
 import './App.css';
