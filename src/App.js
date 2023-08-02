@@ -22,7 +22,6 @@ function App() {
       .then(function (dataUrl) {
         var img = new Image();
         img.width = 750;
-        img.height = 1000;
         img.src = dataUrl;
         document.getElementById('result').appendChild(img);
 
@@ -79,7 +78,7 @@ function App() {
               {imageURL ? (
                 <>
                   <br /> <br />
-                  <img src={imageURL} alt="my signature" style={{ display: "block", margin: "-50px auto", width: "150px" }}
+                  <img src={imageURL} alt="my signature" style={{ display: "block", margin: "-50px auto", MaxWidth: "90px" }}
 
                   />
                 </>
