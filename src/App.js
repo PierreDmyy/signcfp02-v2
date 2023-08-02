@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import Popup from "reactjs-popup";  
+import Popup from "reactjs-popup";
 import { BiSolidCheckCircle, BiPen } from "react-icons/bi";
 
 
@@ -24,10 +24,9 @@ function App() {
         img.width = 750;
         img.src = dataUrl;
         document.getElementById('result').appendChild(img);
-        document.getElementById('valid').style.display = 'none'
 
         var a = document.createElement('a')
-        a.className = "a"
+        a.className = "a btn_valid"
         a.text = "Télécharger"
         a.href = dataUrl
         a.download = "fiche_d'inscription"
@@ -86,15 +85,18 @@ function App() {
               ) : <> <br></br>
                 <Popup
                   modal
-                  trigger={<Button style={{marginTop : '15px'}}>SIGNER <BiPen /></Button>}
+                  trigger={<Button style={{ marginTop: '15px' }}>SIGNER <BiPen /></Button>}
                   closeOnDocumentClick={false} >
                   {close => (
                     <>
                       <SignaturePad ref={sigCanvas} canvasProps={{ className: "signatureCanvas" }}
                       />
-                      <Button variant="success" onClick={save}>ENREGISTER</Button>
+                      <Button variant="success" onClick={() => {
+                        save();
+                        dlpng();
+                      }}>ENREGISTER</Button>
                       <Button variant="danger" onClick={clear}>EFFACER</Button>
-                      {/* <Button variant="secondary" onClick={close}>FERMER</Button> */}
+                      <Button variant="secondary" onClick={close}>FERMER</Button>
                     </>
                   )}
                 </Popup></>}
@@ -102,7 +104,6 @@ function App() {
           </Row>
         </div>
       </div>
-      <Button id="valid" className="btn_valid" variant="success" onClick={dlpng}>Valider <BiSolidCheckCircle /></Button>
       <div style={{ display: 'none' }} id="result"></div>
       <div id="download"></div>
     </div>
