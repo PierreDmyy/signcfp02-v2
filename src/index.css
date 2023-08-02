@@ -113,7 +113,8 @@ i {
 }
 
 [role="dialog"]{
-    max-width:100%;
+    max-width:510px;
+	max-height: 500px;
 }
 
 .log-file{display:none;}

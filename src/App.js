@@ -91,11 +91,11 @@ function App() {
                     <>
                       <SignaturePad ref={sigCanvas} canvasProps={{ className: "signatureCanvas" }}
                       />
-                      <Button variant="success" onClick={() => {
+                      <Button style={{marginRight: '180px'}} variant="success" onClick={() => {
                         save();
                         dlpng();
                       }}>ENREGISTER</Button>
-                      <Button variant="danger" onClick={clear}>EFFACER</Button>
+                      <Button style={{marginRight: '35px'}} variant="danger" onClick={clear}>EFFACER</Button>
                       <Button variant="secondary" onClick={close}>FERMER</Button>
                     </>
                   )}
