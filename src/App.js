@@ -78,7 +78,7 @@ function App() {
               {imageURL ? (
                 <>
                   <br /> <br />
-                  <img src={imageURL} alt="my signature" style={{ display: "block", margin: "-50px auto", MaxWidth: "90px" }}
+                  <img src={imageURL} alt="my signature" style={{ display: "block", margin: "-50px auto", maxWidth: "90px" }}
 
                   />
                 </>
